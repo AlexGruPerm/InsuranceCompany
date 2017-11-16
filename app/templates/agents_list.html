@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+    {% block head %}
+      <link rel=stylesheet type=text/css href="{{url_for('static',filename='css_agents_list.css')}}">
+      <title>Agents List</title>
+      <meta charset='utf-8'>
+    {% endblock %}
+    {% block content %}
+     <div class="agents_table">Here will Table of agents</div>
+    {% endblock %}
+  {% block footer %}
+   block footer 2
+   <a href="/">index</a>
+  {% endblock %}
