@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>{{title}} - microblog</title>
+  </head>
+  <body>
+      <h3>Hello, {{user.nickname}}!</h3>
+      <table border="1">
+         <tr>
+             <td><b>First Name of Agent</b></td>
+             <td><b>Surname of agent</b></td>
+          </tr>
+      {% for k in users.keys() %}
+          <tr>
+              <td>
+                  {{users.get(k).get("FirstName")}}
+              </td>
+              <td>
+                  {{users.get(k).get("Surname")}}
+              </td>
+          </tr>
+      {% endfor %}
+      </table>
+  </body>
+</html>
