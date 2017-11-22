@@ -8,11 +8,25 @@
     {% endblock %}
 </head>
 <body>
-    <div id="content">{% block content %}123{% endblock %}</div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <br>
+    <br>
     <div id="footer">
         {% block footer %}
          block footer 1
-        <a href="/agents">agents</a>
+        <a href="/link121212">link121212</a>
         {% endblock %}
     </div>
 </body>
